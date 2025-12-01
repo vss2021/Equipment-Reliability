@@ -59,7 +59,7 @@ fprintf('瑞利:    %.1f\n', MTTF2);
 fprintf('威布尔:     %.1f\n', MTTF3);
 fprintf('对数:   %.1f\n', MTTF4);
 
-%% 第二问：随机样本生成 + 直方图 + 参数点估计 
+%% 第二问：随机样本生成 + 直方图 + 参数点估计
 clearvars -except lambda1 lambda2 gama ceita mu sigma   % 保留第一问给的参数
 N = 500;        % 样本量
 rng default     
@@ -92,4 +92,5 @@ figure; histogram(T4,20); hold on
 xlabel('t'); legend('对数正态分布样本直方图');
 mu    = mean(log(T4));
 sigma = std(log(T4));
+
 fprintf('对数正态   μ 估计 = %.6f   σ 估计 = %.6f\n',mu,sigma);
